@@ -23,7 +23,7 @@ function App() {
         <div className="todo-wrap">
           <Header />
           <List todo={todo} />
-          <Footer />
+          <Footer todo={todo} />
         </div>
       </div>
     </>

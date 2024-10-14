@@ -1,6 +1,11 @@
-import './Footer.css'
+import { Todo } from "../Model/Todo";
+import "./Footer.css";
 
-export function Footer() {
+type PropsType = {
+  todo: Todo[];
+};
+export function Footer(props: PropsType) {
+  const { todo } = props;
   return (
     <>
       <div className="todo-footer">
@@ -8,7 +13,7 @@ export function Footer() {
           <input type="checkbox" />
         </label>
         <span>
-          <span>Finished 0</span> / total 2
+          <span>Finished 0</span> / total {todo.length}
         </span>
         <button className="btn btn-danger">Delete Finished Tasks</button>
       </div>
