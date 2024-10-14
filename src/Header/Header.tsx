@@ -10,7 +10,7 @@ export function Header() {
   const addNewEvent = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === "Enter") {
       const newTodo: Todo = {
-        id: Todo[Todo.length - 1].id + 1,
+        id: Todo.length !== 0 ? Todo[Todo.length - 1].id + 1 : 1,
         task: todoTask,
         completed: false,
       };
