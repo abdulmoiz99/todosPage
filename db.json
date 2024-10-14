@@ -1,0 +1,35 @@
+{
+    "todos": [
+      {
+        "id": 1,
+        "task": "Buy groceries",
+        "completed": false,
+        "dueDate": "2024-10-15"
+      },
+      {
+        "id": 2,
+        "task": "Finish project report",
+        "completed": true,
+        "dueDate": "2024-10-14"
+      },
+      {
+        "id": 3,
+        "task": "Clean the house",
+        "completed": false,
+        "dueDate": "2024-10-16"
+      },
+      {
+        "id": 4,
+        "task": "Call the bank",
+        "completed": false,
+        "dueDate": "2024-10-18"
+      },
+      {
+        "id": 5,
+        "task": "Read a book",
+        "completed": true,
+        "dueDate": "2024-10-12"
+      }
+    ]
+  }
+  

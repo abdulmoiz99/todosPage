@@ -3,7 +3,7 @@ li {
     list-style: none;
     height: 36px;
     line-height: 36px;
-    padding: 0 5px;
+    padding: 1px 10px;
     border-bottom: 1px solid #ddd;
   }
   
@@ -15,6 +15,7 @@ li {
   li label li input {
     vertical-align: middle;
     margin-right: 6px;
+    margin-left: 1px;
     position: relative;
     top: -1px;
   }

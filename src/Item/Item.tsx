@@ -1,11 +1,17 @@
-import './Item.css'
-export function Item() {
+import "./Item.css";
+
+type PropsType = {
+  todoText: string;
+};
+
+export const Item = (props: PropsType) => {
+  const { todoText } = props;
   return (
     <>
       <li>
         <label>
           <input type="checkbox" />
-          <span>yyyy</span>
+          <span>{todoText}</span>
         </label>
         <button className="btn btn-danger" style={{ display: "none" }}>
           Delete
@@ -13,4 +19,4 @@ export function Item() {
       </li>
     </>
   );
-}
+};
