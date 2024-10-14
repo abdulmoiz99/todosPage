@@ -1,20 +1,13 @@
-import { useEffect, useState } from "react";
 import { Item } from "../Item/Item";
-import "./List.css";
 import { Todo } from "../Model/Todo";
+import "./List.css";
 
-export const List = () => {
-  const [todo, setTodo] = useState<Todo[]>([]);
+type PropsType = {
+  todo: Todo[];
+};
 
-  useEffect(() => {
-    const getList = async () => {
-      const response = await fetch("http://localhost:3000/todos");
-      const data = await response.json();
-      setTodo(data);
-    };
-
-    getList();
-  }, []);
+export const List = (props: PropsType) => {
+  const { todo } = props;
 
   return (
     <>
