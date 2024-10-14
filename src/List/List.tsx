@@ -29,7 +29,7 @@ export const List = () => {
       <ul className="todo-main">
         {todo.map(({ id, task, completed }) => (
           <Item
-            key={id}
+            id={id}
             todoText={task}
             completed={completed}
             updateTodo={() => updateTodo(id, !completed)}

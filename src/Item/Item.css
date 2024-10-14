@@ -1,35 +1,40 @@
-/*item*/
+/* Item */
 li {
-    list-style: none;
-    height: 36px;
-    line-height: 36px;
-    padding: 1px 10px;
-    border-bottom: 1px solid #ddd;
-  }
-  
-  li label {
-    float: left;
-    cursor: pointer;
-  }
-  
-  li label li input {
-    vertical-align: middle;
-    margin-right: 6px;
-    margin-left: 1px;
-    position: relative;
-    top: -1px;
-  }
-  
-  li button {
-    float: right;
-    display: none;
-    margin-top: 3px;
-  }
-  
-  li:before {
-    content: initial;
-  }
-  
-  li:last-child {
-    border-bottom: none;
-  }
+  list-style: none;
+  height: 36px;
+  line-height: 36px;
+  padding: 1px 10px;
+  border-bottom: 1px solid #ddd;
+  position: relative;
+}
+
+li label {
+  float: left;
+  cursor: pointer;
+}
+
+li label input {
+  vertical-align: middle;
+  margin-right: 6px;
+  margin-left: 1px;
+  position: relative;
+  top: -1px;
+}
+
+li button {
+  float: right;
+  display: none !important; /* Hide the button initially */
+  margin-top: 3px;
+}
+
+li:hover > button {
+  display: inline-block !important; /* Show the button on hover */
+}
+
+li:before {
+  content: initial;
+}
+
+li:last-child {
+  border-bottom: none;
+}
