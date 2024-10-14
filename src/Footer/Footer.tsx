@@ -1,3 +1,4 @@
+import { Todo } from "../Model/Todo";
 import { useTodoContext } from "../TodoContext";
 import "./Footer.css";
 
@@ -16,6 +17,10 @@ export function Footer() {
     setTodo(updatedTodo);
   };
 
+  const deleteCompletedTodo = () => {
+    const updatedTodo : Todo[] = todo.filter((todo) => !todo.completed);
+    setTodo(updatedTodo)
+  };
   return (
     <>
       <div className="todo-footer">
@@ -29,7 +34,9 @@ export function Footer() {
         <span>
           <span>Finished {completedTodoCount}</span> / total {todo.length}
         </span>
-        <button className="btn btn-danger">Delete Finished Tasks</button>
+        <button onClick={deleteCompletedTodo} className="btn btn-danger">
+          Delete Finished Tasks
+        </button>
       </div>
     </>
   );
