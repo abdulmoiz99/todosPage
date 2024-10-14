@@ -14,13 +14,27 @@ export const List = () => {
     };
 
     getList();
-  }, []);
+  }, [setTodo]);
+
+  const updateTodo = (id: number, completed: boolean) => {
+    console.log("Clicked");
+    const newTodo = todo!.map((todo) => {
+      if (todo.id === id) return { ...todo, completed };
+      else return todo;
+    });
+    setTodo(newTodo);
+  };
 
   return (
     <>
       <ul className="todo-main">
-        {todo.map(({ id, task }) => (
-          <Item key={id} todoText={task} />
+        {todo.map(({ id, task, completed }) => (
+          <Item
+            key={id}
+            todoText={task}
+            completed={completed}
+            updateTodo={() => updateTodo(id, !completed)}
+          />
         ))}
       </ul>
     </>
