@@ -1,11 +1,8 @@
-import { Todo } from "../Model/Todo";
+import { useTodoContext } from "../TodoContext";
 import "./Footer.css";
 
-type PropsType = {
-  todo: Todo[];
-};
-export function Footer(props: PropsType) {
-  const { todo } = props;
+export function Footer() {
+  const { Todo: todo, setTodo } = useTodoContext();
   return (
     <>
       <div className="todo-footer">
