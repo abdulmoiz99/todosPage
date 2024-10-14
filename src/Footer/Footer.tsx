@@ -4,6 +4,7 @@ import "./Footer.css";
 export function Footer() {
   const { Todo: todo, setTodo } = useTodoContext();
   const completedTodoCount = todo.filter((item) => item.completed).length;
+  const allTodoCompletedChecked: boolean = completedTodoCount === todo.length;
 
   const updateAllTodo = (event: React.ChangeEvent<HTMLInputElement>) => {
     const isChecked = event.target.checked;
@@ -19,7 +20,11 @@ export function Footer() {
     <>
       <div className="todo-footer">
         <label>
-          <input type="checkbox" onChange={updateAllTodo}/>
+          <input
+            type="checkbox"
+            checked={allTodoCompletedChecked}
+            onChange={updateAllTodo}
+          />
         </label>
         <span>
           <span>Finished {completedTodoCount}</span> / total {todo.length}
